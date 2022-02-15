@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@700&display=swap');
+
+/*
+font-family: 'Spline Sans', sans-serif;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Spline+Sans:wght@700&display=swap');
+
+/*
+font-family: 'Comforter Brush', cursive;
+font-family: 'Spline Sans', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* MENU */
+p menu {
+    color: #fff;
+    font-size: 500%;
+}
+
+body{
+    margin: 10px 10px;
+    font-family: sans-serif;
+}
+
+header{
+    width: 100%;
+    background: blue;
+}
+
+#btn-menu{
+    display: none;
+}
+
+header label{
+    display: none;
+    width: 60px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+}
+
+header label:hover{
+    cursor: pointer;
+    background: cadetblue;
+}
+
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.menu li{
+    border-left: 1px solid #fff;
+}
+
+.menu li:hover{
+    background: rgba(0,0,0,0.3);
+}
+
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width:768px) {
+    header label{
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: blue;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 0.5s;
+    }
+
+    .menu ul{
+        flex-direction: column;
+    }
+
+    .menu li{
+        border-top: 1px solid #fff;
+    }
+
+    #btn-menu:checked ~ .menu {
+        margin: 0;
+    }
+}
+
+
+
+/* Estilos Generales */
+
+
+h1{
+    color:blue;
+    text-align: left;
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 200%;
+}
+
+h2{
+    color: rgba(0, 0, 255, 0.685);
+    font-family: 'Spline Sans', sans-serif;
+    font-family: cursive;
+    text-align: left;
+}
+
+h3{
+    color: rgba(0, 0, 255, 0.685);
+    font-family: 'Spline Sans', sans-serif;
+    font-size: 100%;
+}
+
+li{ 
+    list-style: none;
+    text-decoration: none;
+    padding-bottom: 2px;
+    margin: 5px;
+}
+
+label
+{
+    color: cornflowerblue;
+}
+
+div
+{
+    color:black
+}
+
+p
+{
+    line-height: 20px;
+    text-align: justify;
+}
+
+a 
+{
+    color:black;
+    text-decoration: none;
+    align-items: center;
+    align-content: center;
+}
+
+.fondoFormulario{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+body{
+    background-color: blanchedalmond;
+    height: 100%;
+    width: 100%;
+}
+
+/* Estilos Sección Eventos */
+
+.tituloEvento{
+    text-align: left;
+    color: black;
+    font-family: 'Spline Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.infoEvento{
+    text-align: center;
+    color: brown;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.fondoEvento{
+    height: 600px;
+    width: 100%;
+    background-image: url(Fondo2.jpg);
+    background-size: cover;
+}
+
+/* Estilos sección Home */
+
+.gridHome{
+    display: grid;
+    height: 100%;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+}
+
+@media only screen and (min-width:50px) and (max-width:479px){
+    .gridHome{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .titulo1Home{
+        grid-column: 1;
+        grid-row: 1;
+        background-size: cover;
+    }
+    
+    .texto1{
+        grid-column: 1;
+        grid-row: 2;
+        background-size: cover;
+        color: black;
+    }
+    
+    .titulo2Home{
+        grid-column: 1;
+        grid-row: 3;
+        background-size: cover;
+    }
+    
+    .texto2{
+        grid-column: 1;
+        grid-row: 4;
+        background-size: cover;
+        color: black;
+    }
+    
+    .imagenHome{
+        grid-column: 1;
+        grid-row: 5;
+        background-size: cover;
+        background-image: url(Fondo1.png);
+        width: 800px; 
+        height: 150px;
+    }
+    
+    .videoHome{
+        grid-column: 1;
+        grid-row: 6;
+        background-size: cover;
+        width: 500px; 
+        height: 200px; 
+    }
+    }
+
+@media only screen and (min-width:480px){
+.titulo1Home{
+    grid-column: 1/4;
+    grid-row: 1;
+    background-size: cover;
+}
+
+.texto1{
+    grid-column: 1/4;
+    grid-row: 2;
+    background-size: cover;
+    color: black;
+}
+
+.titulo2Home{
+    grid-column: 1/4;
+    grid-row: 3;
+    background-size: cover;
+}
+
+.texto2{
+    grid-column: 1/4;
+    grid-row: 4;
+    background-size: cover;
+    color: black;
+}
+
+.imagenHome{
+    grid-column: 1/2;
+    grid-row: 5;
+    background-size: cover;
+    background-image: url(Fondo1.png);
+    width: 800px; 
+    height: 150px;
+}
+
+.videoHome{
+    grid-column: 3/4;
+    grid-row: 5;
+    background-size: cover;
+    width: 500px; 
+    height: 200px; 
+}
+}
+
+/* Estilo Footer */
+
+.footer{
+    height: 20%;
+    width: 100%;
+    position: absolute;
+    border-top: 2px solid black;
+    background-image: linear-gradient(blanchedalmond,black);
+}
+
+.footer .gridFooter{
+    display: grid;
+    height: 35%;
+    width: 15%;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.footer .gridFooter .img{
+    border: 1px solid whitesmoke;
+}
+
+@media only screen and (min-width:50px) and (max-width:1099px){
+
+    .footer .gridFooter{
+        height: 25%;
+        width: 15%;
+    }
+
+    .logoFacebook{
+            grid-column: 1;
+            background-image: url(Facebook\ Logo.png);
+            background-size: cover;
+    }
+    
+    .logoInstagram{
+        grid-column: 2;
+        background-image: url(Instagram\ Logo.png);
+        background-size: cover;
+    }
+
+    .logoYoutube{  
+        grid-column: 3;
+        background-image: url(Youtube\ Logo.png);
+        background-size: cover;
+        }
+
+    .logoTwitter{
+        grid-column: 4;
+        background-image: url(Twitter\ Logo.png);
+        background-size: cover;
+        }
+    }
+
+@media only screen and (min-width:1100px){
+
+.logoFacebook{
+        grid-column: 1;
+        background-image: url(Facebook\ Logo.png);
+        background-size: cover;
+        transition: width 10s;
+        transition: height 10s;
+}
+
+.logoFacebook:hover {
+    width: 45px;
+    height: 45px;
+    }
+
+.logoInstagram{
+    grid-column: 2;
+    background-image: url(Instagram\ Logo.png);
+    background-size: cover;
+    transition: width 5s;
+    transition: height 5s;
+}
+
+.logoInstagram:hover {
+    width: 45px;
+    height: 45px;
+    }
+
+.logoYoutube{
+    grid-column: 3;
+    background-image: url(Youtube\ Logo.png);
+    background-size: cover;
+    transition: width 5s;
+    transition: height 5s;
+}
+
+.logoYoutube:hover {
+    width: 45px;
+    height: 45px;
+    }
+
+.logoTwitter{
+    grid-column: 4;
+    background-image: url(Twitter\ Logo.png);
+    background-size: cover;
+    transition: width 5s;
+    transition: height 5s;
+}
+
+.logoTwitter:hover {
+    width: 45px;
+    height: 45px;
+    }
+}
+
+/* Estilo sección Galeria */
+
+.galeria{
+    height: 800px;
+    width: 100%;
+}
+
+.galeria .gridContainer{
+    height: 100%;
+    width: 100%;
+    display: grid;
+}
+
+.gridContainer .img{
+    border: 10px solid whitesmoke;
+}
+
+
+@media only screen and (min-width:50px) and (max-width:479px){
+    .galeria .gridContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img1{
+        grid-column: 1;
+        grid-row: 1;
+        background-color: grey;
+        background-image: url(Galeria1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img2{
+        grid-column: 1;
+        grid-row: 2;
+        background-color: hotpink;
+        background-image: url(Galeria2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img3{
+        grid-column: 1;
+        grid-row: 3;
+        background-color: indigo;
+        background-image: url(Galeria6.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img4{
+        grid-column: 1;
+        grid-row: 4;
+        background-color: lawngreen;
+        background-image: url(Galeria4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img5{
+        grid-column: 1;
+        grid-row: 5;
+        background-color: lightseagreen;
+        background-image: url(Galeria5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img6{
+        grid-column: 1;
+        grid-row: 6;
+        background-color: maroon;
+        background-image: url(Galeria3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img7{
+        grid-column: 1;
+        grid-row: 7;
+        background-color: mediumblue;
+        background-image: url(Galeria8.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img8{
+        grid-column: 1;
+        grid-row: 8;
+        background-color: red;
+        background-image: url(Galeria7.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media only screen and (min-width:480px) and (max-width:899px){
+    .galeria .gridContainer{
+        grid-template-columns: repeat(3, 1fr);
+    } 
+    .img1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: grey;
+        background-image: url(Galeria1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img2{
+        grid-column: 2/3 ;
+        grid-row: 1/2;
+        background-color: hotpink;
+        background-image: url(Galeria2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img3{
+        grid-column: 3/4 ;
+        grid-row: 1/2;
+        background-color: indigo;
+        background-image: url(Galeria6.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img4{
+        grid-column: 1/2 ;
+        grid-row: 2/4;
+        background-color: lawngreen;
+        background-image: url(Galeria4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img5{
+        grid-column: 2/3 ;
+        grid-row: 2/3;
+        background-color: lightseagreen;
+        background-image: url(Galeria5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img6{
+        grid-column: 3/4 ;
+        grid-row: 2/3;
+        background-color: maroon;
+        background-image: url(Galeria3.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img7{
+        grid-column: 1/2 ;
+        grid-row: 3/4;
+        background-color: mediumblue;
+        background-image: url(Galeria8.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img8{
+        grid-column: 2/4 ;
+        grid-row: 3/4;
+        background-color: red;
+        background-image: url(Galeria7.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+}
+    
+
+@media only screen and (min-width:900px){
+    .galeria .gridContainer{
+        grid-template-columns: repeat(4,1fr);
+    }   
+    .img1{
+        grid-column: 1/2;
+        grid-row: 1/3;
+        background-color: grey;
+        background-image: url(Galeria1.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img2{
+        grid-column: 2/4 ;
+        grid-row: 1/2;
+        background-color: hotpink;
+        background-image: url(Galeria2.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img3{
+        grid-column: 4/5 ;
+        grid-row: 1/2;
+        background-color: indigo;
+        background-image: url(Galeria6.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img4{
+        grid-column: 2/3 ;
+        grid-row: 2/4;
+        background-color: lawngreen;
+        background-image: url(Galeria4.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img5{
+        grid-column: 3/4 ;
+        grid-row: 2/3;
+        background-color: lightseagreen;
+        background-image: url(Galeria5.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img6{
+        grid-column: 4/5 ;
+        grid-row: 2/3;
+        background-color: maroon;
+        background-image: url(Galeria3.jpg);
+        background-size: contain;
+        background-position: center;
+    }
+    
+    .img7{
+        grid-column: 1/2 ;
+        grid-row: 3/4;
+        background-color: mediumblue;
+        background-image: url(Galeria8.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .img8{
+        grid-column: 3/5 ;
+        grid-row: 3/4;
+        background-color: red;
+        background-image: url(Galeria7.jpg);
+        background-size: cover;
+        background-position: unset;
+    }
+}
+
+/* Estilo pag 404 */
+
+.cuerpo__404{
+    text-align: center;
+    font-family: 'Spline Sans', sans-serif;
+}
+
+.link__404{
+    background-color: blue;
+    color: white;
+}
+
+.fondo__404{
+    background-color: cornsilk;
+}
+
+/* Estilo Formulario */
+
+.fondoFormulario{
+    margin: 20px 70px;
+    align-content: center;
+    align-items: center;
+}
+
+/* Estilo Publicaciones */
+
+
+.publicaciones__item{
+    color: red;
+    background-color: cyan;
+    width: 10%;
+}
